@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_seevarethnam_deploy_app_1703442125129-pr-trigger-input-set
+  identifier: Build_seevarethnam_deploy_app_1703442125129prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Deploy
+  pipeline:
+    identifier: Build_seevarethnam_deploy_app_1703442125129
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
