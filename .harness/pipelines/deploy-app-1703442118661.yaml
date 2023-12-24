@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_seevarethnam_deploy_app_1703442125129
+  name: Build deploy-app
+  orgIdentifier: default
+  projectIdentifier: Deploy
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1702534972253
+        repoName: seevarethnam/deploy-app
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
